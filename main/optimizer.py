@@ -93,7 +93,7 @@ class Oracle:
         self.sort_buffer()
         with open(output_file_path, 'w') as f:
             yaml.dump(self.mol_buffer, f, sort_keys=False)
-
+    '''
     def evaluate_array(self, smi):
         score = []
         for eva in self.max_evaluator:
@@ -104,7 +104,7 @@ class Oracle:
             else:
                 score.append(eva(smi))
         return score
-    
+    '''   
     def evaluate_array(self, smi):
         scores = []
         for p in self.name_list:
